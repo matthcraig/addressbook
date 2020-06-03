@@ -16,9 +16,9 @@ $(document).ready(function(){
     $(".address").show();
 
     $("h1.result").after($("<p class=\"contact-name\"></p>").text(name));
-    $("p.contact-name").first().after($("<p class=\"contact-info\"></p>").text(street + " " + city + " " + state + " " + zip));
-    $("h1.result").first().click(function() {
-      $("h1.result").next("p.contact-info").toggle();
+    $("p.contact-name").first().click(function() {
+      $(this).next(".contact-info").toggle();
     });
+    $("p.contact-name").first().after($("<p class=\"contact-info\"></p>").text(street + " " + city + " " + state + " " + zip));
   });
-})
+});
